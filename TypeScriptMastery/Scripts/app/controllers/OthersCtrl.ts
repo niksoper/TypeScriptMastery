@@ -1,10 +1,10 @@
-﻿import angular = require('angular');
+﻿import register = require('register');
 
 export interface IOtherScope extends ng.IScope {
     names: string[];
 }
 
-export class Controller {
+export class Controller implements app.controllers.IController {
 
     static $inject = ['$scope'];
 
@@ -13,6 +13,4 @@ export class Controller {
     }
 }
 
-angular
-    .module('app.controllers')
-    .controller(Controller);
+register.controller(Controller);

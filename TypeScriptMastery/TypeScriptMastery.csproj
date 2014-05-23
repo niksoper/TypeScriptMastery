@@ -358,11 +358,12 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\app\angular.modulesd.d.ts" />
-    <TypeScriptCompile Include="Scripts\app\controllers.ts" />
+    <TypeScriptCompile Include="Scripts\app\controllers\IController.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\MembersCtrl.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\OthersCtrl.ts" />
     <TypeScriptCompile Include="Scripts\app\app.ts" />
     <TypeScriptCompile Include="Scripts\app\bootstrap.ts" />
+    <TypeScriptCompile Include="Scripts\app\register.ts" />
     <TypeScriptCompile Include="Scripts\app\routes.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />

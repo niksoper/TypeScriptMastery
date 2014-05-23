@@ -1,4 +1,4 @@
-﻿define(["require", "exports", 'angular'], function(require, exports, angular) {
+﻿define(["require", "exports", 'register'], function(require, exports, register) {
     var Controller = (function () {
         function Controller($scope) {
             this.$scope = $scope;
@@ -9,7 +9,6 @@
     })();
     exports.Controller = Controller;
 
-    // register the MembersCtrl class as a controller on the app.controllers angular module
-    angular.module('app.controllers').controller(Controller);
+    register.controller(Controller);
 });
 //# sourceMappingURL=MembersCtrl.js.map
