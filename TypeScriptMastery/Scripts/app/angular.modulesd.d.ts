@@ -1,4 +1,7 @@
-﻿declare module 'angular' {
+﻿/* Declaring these modules allows them to be imported using 
+ *  . */
+
+declare module 'angular' {
     export = angular;
 } 
 

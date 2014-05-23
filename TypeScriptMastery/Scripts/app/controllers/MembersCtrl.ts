@@ -1,23 +1,19 @@
 ﻿import angular = require('angular');
 
-module app.controllers {
+export interface IMembersScope extends ng.IScope {
+    members: string[];
+}
 
-    interface IMembersScope extends ng.IScope {
-        members: string[];
+export class Controller {
+
+    static $inject = ['$scope'];
+
+    constructor(private $scope: IMembersScope) {
+        $scope.members = ['MembersCtrl', 'Chris'];
     }
+}
 
-    export class MembersCtrl {
-
-        static $inject = ['$scope'];
-
-        constructor(private $scope: IMembersScope) {
-            $scope.members = ['MembersCtrl', 'Chris'];
-        }
-    }
-
-    // register an angular module named 'homepage.controllers' and add the membersCtrl to the module
-    angular
-        .module('app.controllers')
-        .controller('MembersCtrl', MembersCtrl);
-
-} 
+// register the MembersCtrl class as a controller on the app.controllers angular module
+angular
+    .module('app.controllers')
+    .controller(Controller);

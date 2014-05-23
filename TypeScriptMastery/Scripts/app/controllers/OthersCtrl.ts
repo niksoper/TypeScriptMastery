@@ -1,24 +1,18 @@
-﻿//import angular = require('angular');
+﻿import angular = require('angular');
 
-//module Controllers {
+export interface IOtherScope extends ng.IScope {
+    names: string[];
+}
 
-//    interface IOtherScope extends ng.IScope {
-//        names: string[];
-//    }
+export class Controller {
 
-//    export class OtherCtrl {
+    static $inject = ['$scope'];
 
-//        static $inject = ['$scope'];
+    constructor(private $scope: IOtherScope) {
+        $scope.names = ['OthersCtrl', 'Some', 'Others'];
+    }
+}
 
-//        constructor(private $scope: IOtherScope) {
-//            $scope.names = ['Some', 'Names', 'Eh', 'OthersCtrl'];
-//        }
-
-//    }
-
-//    // register an angular module named 'homepage.controllers' and add the membersCtrl to the module
-//    angular
-//        .module('app.controllers')
-//        .controller('OtherCtrl', OtherCtrl);
-
-//} 
+angular
+    .module('app.controllers')
+    .controller(Controller);

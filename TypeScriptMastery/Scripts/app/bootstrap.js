@@ -13,16 +13,17 @@
             'angular': {
                 exports: 'angular'
             },
-            'angular-route': ['angular'],
-            'controllers/MembersCtrl': {
-                deps: ['app']
-            }
+            'angular-route': ['angular']
         }
     });
 
-    // define a requirejs module called 'bootstrap' (from the name of this file)
-    require(['angular', 'jquery', 'app', 'controllers/MembersCtrl', 'angular-route'], function (angular, $) {
-        // this bootstraps the angular 'app' module
+    // run a function once the dependencies have been loaded by requirejs
+    require([
+        'angular', 'jquery', 'angular-route',
+        'routes'], function (angular, $) {
+        /* The above routes dependency is the routes.ts file which itself has a dependency on the
+        * app.ts file. It is the app.ts file that creates the 'app' angular module that is
+        * bootstrapped below. */
         $(function () {
             angular.bootstrap(document, ['app']);
         });
