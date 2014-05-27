@@ -1,4 +1,4 @@
-﻿define(["require", "exports", 'register'], function(require, exports, register) {
+﻿define(["require", "exports"], function(require, exports) {
     var Controller = (function () {
         function Controller($scope) {
             this.$scope = $scope;
@@ -8,7 +8,5 @@
         return Controller;
     })();
     exports.Controller = Controller;
-
-    register.controller(Controller);
 });
 //# sourceMappingURL=MembersCtrl.js.map

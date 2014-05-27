@@ -1,6 +1,4 @@
-﻿import register = require('register');
-
-export interface IMembersScope extends ng.IScope {
+﻿export interface IMembersScope extends ng.IScope {
     members: string[];
 }
 
@@ -12,5 +10,3 @@ export class Controller implements app.controllers.IController {
         $scope.members = ['MembersCtrl', 'Chris'];
     }
 }
-
-register.controller(Controller);

@@ -1,5 +1,8 @@
-﻿import app = require('app');
+﻿/* The registration of each controller like this appears to be
+ * unnecessary. */
 
-export function controller(ctrl: app.controllers.IController) {
-    app.controller(ctrl);
-}
+//import app = require('app');
+
+//export function controller(ctrl: app.controllers.IController) {
+//    //app.controller(ctrl);
+//}

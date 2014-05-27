@@ -1,17 +1,8 @@
 ﻿define(["require", "exports", 'angular'], function(require, exports, angular) {
     'use strict;';
 
-    // create and register custom angular modules
-    var modules = ['app.controllers'];
-    modules.forEach(function (m) {
-        return angular.module(m, []);
-    });
-
-    // add any externally registered modules to the array
-    modules.push('ngRoute');
-
-    // create and configure the main app module
-    var app = angular.module('app', modules);
+    // create and configure the main app module with a dependency on ngRoute
+    var app = angular.module('app', ['ngRoute']);
 
     
     return app;
