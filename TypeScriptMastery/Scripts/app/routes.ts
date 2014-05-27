@@ -1,5 +1,5 @@
 ﻿import app = require('app');
-import member = require('controllers/MembersCtrl');
+import members = require('controllers/MembersCtrl');
 import others = require('controllers/OthersCtrl');
 
 app.config(['$routeProvider',
@@ -9,7 +9,7 @@ app.config(['$routeProvider',
         $routeProvider
             .when('/', {
                 templateUrl: 'Scripts/app/views/listmembers.html',
-                controller: member.Controller
+                controller: members.Controller
             })
             .when('/other', {
                 templateUrl: 'Scripts/app/views/listothers.html',

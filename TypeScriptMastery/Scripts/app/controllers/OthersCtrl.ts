@@ -2,7 +2,7 @@
     names: string[];
 }
 
-export class Controller implements app.controllers.IController {
+export class Controller {
 
     static $inject = ['$scope'];
 
