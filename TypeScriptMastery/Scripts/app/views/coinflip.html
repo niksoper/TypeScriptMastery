@@ -1,0 +1,13 @@
+﻿<h2>Coin flip</h2>
+
+<div>
+    <button ng-click="flipCoin()">Flip!</button>
+
+    <div>
+        Results:
+        <ul>
+            <li ng-repeat="r in results track by $index">{{r}}</li>
+        </ul>
+    </div>
+
+</div>

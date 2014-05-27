@@ -59,6 +59,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\app\views\coinflip.html" />
     <Content Include="Scripts\app\views\listothers.html" />
     <Content Include="Scripts\app\views\listmembers.html" />
     <Content Include="packages.config" />
@@ -359,10 +360,13 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\app\angular.modules.d.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\MembersCtrl.ts" />
+    <TypeScriptCompile Include="Scripts\app\controllers\CoinFlipCtrl.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\OthersCtrl.ts" />
     <TypeScriptCompile Include="Scripts\app\app.ts" />
     <TypeScriptCompile Include="Scripts\app\bootstrap.ts" />
     <TypeScriptCompile Include="Scripts\app\routes.ts" />
+    <TypeScriptCompile Include="Scripts\app\services.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\coinFlipService.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
@@ -374,6 +378,7 @@
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\requirejs\require.d.ts" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

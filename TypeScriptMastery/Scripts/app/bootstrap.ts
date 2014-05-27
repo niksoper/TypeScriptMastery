@@ -21,7 +21,7 @@
     // run a function once the dependencies have been loaded by requirejs
     require(
         ['angular', 'jquery', 'angular-route',
-         'routes'],
+         'routes', 'services'],
         function (angular: ng.IAngularStatic, $: JQueryStatic) {
 
             /* The above routes dependency is the routes.ts file which itself has a dependency on the 

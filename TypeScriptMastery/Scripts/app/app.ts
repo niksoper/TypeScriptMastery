@@ -1,5 +1,4 @@
 ﻿import angular = require('angular');
-import angularRoute = require('angular-route');
 
 'use strict;'
 
