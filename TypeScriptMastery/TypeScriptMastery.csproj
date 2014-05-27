@@ -357,7 +357,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\app\angular.modulesd.d.ts" />
+    <TypeScriptCompile Include="Scripts\app\angular.modules.d.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\IController.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\MembersCtrl.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\OthersCtrl.ts" />
