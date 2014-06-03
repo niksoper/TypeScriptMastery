@@ -1,5 +1,5 @@
 ﻿/* Declaring these modules allows them to be imported using 
- *  . */
+ * TypeScript's 'import x = require('blah');' syntax. */
 
 declare module 'angular' {
     export = angular;
