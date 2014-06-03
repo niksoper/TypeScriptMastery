@@ -20,7 +20,7 @@
     // run a function once the dependencies have been loaded by requirejs
     require([
         'angular', 'jquery', 'angular-route',
-        'routes', 'services'], function (angular, $) {
+        'routes'], function (angular, $) {
         /* The above routes dependency is the routes.ts file which itself has a dependency on the
         * app.ts file. It is the app.ts file that creates the 'app' angular module that is
         * bootstrapped below. */
