@@ -2,22 +2,21 @@
 
 import coinFlip = require('services/coinFlipService');
 
-export interface ICoinFlipScope extends ng.IScope {
-    flipCoin: Function;
-    results: string[];
+export interface IControllerScope<T> extends ng.IScope {
+    vm: T;
 }
 
 export class Controller {
 
+    results: string[] = [];
+    
     static $inject = ['$scope', 'coinFlipService'];
-    constructor(private $scope: ICoinFlipScope, private coinFlipService: coinFlip.CoinFlipService) {
+    constructor(private $scope: IControllerScope<Controller>, private coinFlipService: coinFlip.CoinFlipService) {
 
-        $scope.results = ['None'];
+        $scope.vm = this;
+    }
 
-        $scope.flipCoin = () => {
-
-            $scope.results.splice(0, 0, coinFlipService.flipCoin());
-
-        }
+    flipCoin() {
+        this.results.splice(0, 0, this.coinFlipService.flipCoin());
     }
 }
