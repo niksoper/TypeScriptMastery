@@ -360,12 +360,12 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\app\angular.modules.d.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\IControllerScope.ts" />
-    <TypeScriptCompile Include="Scripts\app\controllers\MembersCtrl.ts" />
-    <TypeScriptCompile Include="Scripts\app\controllers\CoinFlipCtrl.ts" />
-    <TypeScriptCompile Include="Scripts\app\controllers\OthersCtrl.ts" />
+    <TypeScriptCompile Include="Scripts\app\controllers\Members.ts" />
+    <TypeScriptCompile Include="Scripts\app\controllers\CoinFlip.ts" />
+    <TypeScriptCompile Include="Scripts\app\controllers\Navigation.ts" />
+    <TypeScriptCompile Include="Scripts\app\controllers\Others.ts" />
     <TypeScriptCompile Include="Scripts\app\app.ts" />
     <TypeScriptCompile Include="Scripts\app\bootstrap.ts" />
-    <TypeScriptCompile Include="Scripts\app\directives\CoinFlipSet.ts" />
     <TypeScriptCompile Include="Scripts\app\routes.ts" />
     <TypeScriptCompile Include="Scripts\app\services\coinFlipService.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />

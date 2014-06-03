@@ -1,7 +1,7 @@
 ﻿import app = require('app');
-import members = require('controllers/MembersCtrl');
-import others = require('controllers/OthersCtrl');
-import coinflip = require('controllers/CoinFlipCtrl');
+import members = require('controllers/Members');
+import others = require('controllers/Others');
+import coinflip = require('controllers/CoinFlip');
 
 'use strict';
 
