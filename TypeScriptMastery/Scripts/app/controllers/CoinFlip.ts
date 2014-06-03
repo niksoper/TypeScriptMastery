@@ -1,20 +1,26 @@
-﻿/// <amd-dependency path="services/coinFlipService" />
+﻿/// <amd-dependency path="services/CoinFlip" />
+/// <amd-dependency path="services/Account" />
 
-import coinFlip = require('services/coinFlipService');
+import coinFlip = require('services/CoinFlip');
+import account = require('services/Account');
 import scope = require('controllers/IControllerScope');
 import bet = require('models/IBet');
 
 export class Controller {
 
+    private wallet: number;
+
     results: string[] = [];
     bet: bet.IBet;
-    wallet: number;
     message: string;
     
-    static $inject = ['$scope', 'coinFlipService'];
-    constructor(private $scope: scope.IControllerScope<Controller>, private coinFlipService: coinFlip.CoinFlipService) {
+    static $inject = ['$scope', 'coinFlipService', 'accountService'];
+    constructor(
+        private $scope: scope.IControllerScope<Controller>,
+        private coinFlipService: coinFlip.CoinFlipService,
+        private accountService: account.AccountService) {
 
-        this.wallet = 100;
+        this.wallet = this.accountService.credit(100);
         this.bet = { choice: 'Heads', stake: 5 };
 
         $scope.vm = this;
@@ -22,14 +28,14 @@ export class Controller {
 
     flipCoin(): void {
 
-        this.wallet -= this.bet.stake;
+        this.wallet = this.accountService.debit(this.bet.stake);
 
         var result: string = this.coinFlipService.flipCoin();
 
         if (result === this.bet.choice) {
 
             var payout: number = this.coinFlipService.payout(this.bet);
-            this.wallet += payout;
+            this.wallet = this.accountService.credit(payout);
 
             var profit = payout - this.bet.stake;
 
