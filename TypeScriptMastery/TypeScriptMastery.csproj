@@ -60,8 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\app\views\coinflip.html" />
-    <Content Include="Scripts\app\views\listothers.html" />
-    <Content Include="Scripts\app\views\listmembers.html" />
+    <Content Include="Scripts\app\views\cardpick.html" />
+    <Content Include="Scripts\app\views\roulette.html" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -360,10 +360,10 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\app\angular.modules.d.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\IControllerScope.ts" />
-    <TypeScriptCompile Include="Scripts\app\controllers\Members.ts" />
+    <TypeScriptCompile Include="Scripts\app\controllers\Roulette.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\CoinFlip.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\Navigation.ts" />
-    <TypeScriptCompile Include="Scripts\app\controllers\Others.ts" />
+    <TypeScriptCompile Include="Scripts\app\controllers\CardPick.ts" />
     <TypeScriptCompile Include="Scripts\app\app.ts" />
     <TypeScriptCompile Include="Scripts\app\bootstrap.ts" />
     <TypeScriptCompile Include="Scripts\app\routes.ts" />

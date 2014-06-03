@@ -1,9 +1,12 @@
 ﻿import app = require('app');
-import members = require('controllers/Members');
-import others = require('controllers/Others');
+import navigation = require('controllers/Navigation');
+import cardpick = require('controllers/CardPick');
+import roulette = require('controllers/Roulette');
 import coinflip = require('controllers/CoinFlip');
 
 'use strict';
+
+app.controller('NavigationController', navigation.Controller);
 
 app.config(['$routeProvider',
     function ($routeProvider: ng.route.IRouteProvider) {
@@ -14,13 +17,13 @@ app.config(['$routeProvider',
                 templateUrl: 'Scripts/app/views/coinflip.html',
                 controller: coinflip.Controller
             })
-            .when('/members', {
-                templateUrl: 'Scripts/app/views/listmembers.html',
-                controller: members.Controller
+            .when('/roulette', {
+                templateUrl: 'Scripts/app/views/roulette.html',
+                controller: roulette.Controller
             })
-            .when('/other', {
-                templateUrl: 'Scripts/app/views/listothers.html',
-                controller: others.Controller
+            .when('/cardpick', {
+                templateUrl: 'Scripts/app/views/cardpick.html',
+                controller: cardpick.Controller
             })
             .otherwise({ redirectTo: '/' });
     }]);

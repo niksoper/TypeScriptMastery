@@ -1,16 +1,23 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<head ng-app>
     <title>Mastering TypeScript with AngularJS and RequireJS</title>
 </head>
 <body>
     <h1>Mastering TypeScript with AngularJS and RequireJS</h1>
 
+    <div ng-controller="NavigationController">
+        <ul ng-cloak>
+            <li ng-repeat="h in vm.headings">
+                <a href="{{h.url}}">{{h.text}}</a>
+            </li>
+        </ul>
+    </div>
+
     <div ng-view></div>
 
-    <div>Hmm.</div>
-
     <script type="text/javascript" src="Scripts/require.js" data-main="Scripts/app/bootstrap"></script>
+    <script type="text/javascript" src="Scripts/app/controllers/Navigation.ts"></script>
 
 </body>
 </html>
