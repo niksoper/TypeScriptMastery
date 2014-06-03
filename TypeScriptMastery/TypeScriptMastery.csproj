@@ -359,6 +359,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\app\angular.modules.d.ts" />
+    <TypeScriptCompile Include="Scripts\app\controllers\IControllerScope.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\MembersCtrl.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\CoinFlipCtrl.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\OthersCtrl.ts" />
