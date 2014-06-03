@@ -1,9 +1,38 @@
 ﻿<h2>Coin flip</h2>
 
+<div>You have <strong>{{vm.wallet | currency:"£"}}</strong></div>
+
 <div>
-    <button ng-click="vm.flipCoin()">Flip!</button>
+
+    <form ng-submit="vm.flipCoin()">
+
+        <label for="stake">Stake</label>
+        <input id="stake" type="number" ng-model="vm.bet.stake" max="{{vm.wallet}}" />
+
+        <fieldset>
+            <legend>Choice</legend>
+
+            <ul>
+                <li>
+                    <input id="heads" type="radio" ng-model="vm.bet.choice" value="Heads" />
+                    <label for="heads">Heads</label>
+                </li>
+                <li>
+                    <input id="tails" type="radio" ng-model="vm.bet.choice" value="Tails" />
+                    <label for="tails">Tails</label>
+                </li>
+            </ul>
+
+        </fieldset>
+
+        <input type="submit" value="Flip!" ng-disabled="vm.wallet <= 0" />
+
+    </form>
 
     <div>
+
+        <div ng-show="vm.message">{{vm.message}}</div>
+
         Results:
         <ul>
             <li ng-repeat="r in vm.results track by $index">{{r}}</li>

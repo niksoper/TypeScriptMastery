@@ -366,6 +366,7 @@
     <TypeScriptCompile Include="Scripts\app\controllers\CardPick.ts" />
     <TypeScriptCompile Include="Scripts\app\app.ts" />
     <TypeScriptCompile Include="Scripts\app\bootstrap.ts" />
+    <TypeScriptCompile Include="Scripts\app\models\IBet.ts" />
     <TypeScriptCompile Include="Scripts\app\routes.ts" />
     <TypeScriptCompile Include="Scripts\app\services\coinFlipService.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
