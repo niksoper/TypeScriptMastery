@@ -1,12 +1,11 @@
-﻿export interface IMembersScope extends ng.IScope {
-    members: string[];
-}
+﻿import scope = require('controllers/IControllerScope');
 
 export class Controller {
 
-    static $inject = ['$scope'];
+    members = ['Ringo', 'Paul'];
 
-    constructor(private $scope: IMembersScope) {
-        $scope.members = ['MembersCtrl', 'Chris'];
+    static $inject = ['$scope'];
+    constructor(private $scope: scope.IControllerScope<Controller>) {
+        $scope.vm = this;
     }
 }

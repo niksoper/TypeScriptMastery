@@ -365,6 +365,7 @@
     <TypeScriptCompile Include="Scripts\app\controllers\OthersCtrl.ts" />
     <TypeScriptCompile Include="Scripts\app\app.ts" />
     <TypeScriptCompile Include="Scripts\app\bootstrap.ts" />
+    <TypeScriptCompile Include="Scripts\app\directives\CoinFlipSet.ts" />
     <TypeScriptCompile Include="Scripts\app\routes.ts" />
     <TypeScriptCompile Include="Scripts\app\services\coinFlipService.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />

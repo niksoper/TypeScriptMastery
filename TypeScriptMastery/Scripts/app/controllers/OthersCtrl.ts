@@ -1,12 +1,12 @@
-﻿export interface IOtherScope extends ng.IScope {
-    names: string[];
-}
+﻿import scope = require('controllers/IControllerScope');
+
 
 export class Controller {
 
-    static $inject = ['$scope'];
+    names = ['Some', 'Names'];
 
-    constructor(private $scope: IOtherScope) {
-        $scope.names = ['OthersCtrl', 'Some', 'Others'];
+    static $inject = ['$scope'];
+    constructor(private $scope: scope.IControllerScope<Controller>) {
+        $scope.vm = this;
     }
 }

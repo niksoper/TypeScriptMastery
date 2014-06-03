@@ -2,7 +2,8 @@
     var Controller = (function () {
         function Controller($scope) {
             this.$scope = $scope;
-            $scope.names = ['OthersCtrl', 'Some', 'Others'];
+            this.names = ['Some', 'Names'];
+            $scope.vm = this;
         }
         Controller.$inject = ['$scope'];
         return Controller;

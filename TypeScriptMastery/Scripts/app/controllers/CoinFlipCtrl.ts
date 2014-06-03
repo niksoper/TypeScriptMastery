@@ -13,7 +13,7 @@ export class Controller {
         $scope.vm = this;
     }
 
-    flipCoin() {
+    flipCoin(): void {
         this.results.splice(0, 0, this.coinFlipService.flipCoin());
     }
 }
