@@ -1,12 +1,13 @@
-﻿import scope = require('controllers/IControllerScope');
+﻿/// <reference path="../reference.ts" />
 
+module Controllers {
+    export class CardPickContorller {
 
-export class Controller {
+        names = ['Some', 'Names'];
 
-    names = ['Some', 'Names'];
-
-    static $inject = ['$scope'];
-    constructor(private $scope: scope.IControllerScope<Controller>) {
-        $scope.vm = this;
+        static $inject = ['$scope'];
+        constructor(private $scope: IControllerScope<CardPickContorller>) {
+            $scope.vm = this;
+        }
     }
 }

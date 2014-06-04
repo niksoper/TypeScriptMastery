@@ -183,3 +183,6 @@ $RECYCLE.BIN/
 *.scssc
 
 *.js
+
+# npm
+TypeScriptMastery/node_modules/

@@ -1,8 +1,8 @@
-﻿import app = require('app');
+﻿/// <reference path="../reference.ts" />
 
-export class AccountService {
+class AccountService {
 
-    private balance: number = 0;
+    private balance: number = 20;
 
     credit(amount: number): number {
         this.balance += amount;
@@ -20,4 +20,4 @@ export class AccountService {
     }
 }
 
-app.service('accountService', AccountService);
+angular.module('services').service('accountService', AccountService);

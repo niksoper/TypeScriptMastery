@@ -1,4 +1,6 @@
-﻿export interface IBet {
-    choice: any;
-    stake: number;
+﻿module Models {
+    export interface IBet {
+        choice: any;
+        stake: number;
+    }
 }

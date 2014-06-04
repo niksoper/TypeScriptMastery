@@ -1,23 +1,26 @@
-﻿import scope = require('controllers/IControllerScope');
+﻿/// <reference path="../reference.ts" />
 
-export interface Heading {
-    text: string;
-    url: string;
-}
+module Controllers {
 
-export class Controller {
-
-    headings: Heading[];
-
-    constructor($scope: scope.IControllerScope<Controller>) {
-        $scope.vm = this;
-
-        this.headings = [
-            { text: 'Coin flip', url: '#/coinflip' },
-            { text: 'Roulette', url: '#/roulette' },
-            { text: 'Pick a card', url: '#/cardpick' }
-        ];
-
+    export interface Heading {
+        text: string;
+        url: string;
     }
 
+    export class NavigationController {
+
+        headings: Heading[];
+
+        constructor($scope: IControllerScope<NavigationController>) {
+            $scope.vm = this;
+
+            this.headings = [
+                { text: 'Coin flip', url: '#/coinflip' },
+                { text: 'Roulette', url: '#/roulette' },
+                { text: 'Pick a card', url: '#/cardpick' }
+            ];
+
+        }
+
+    }
 }

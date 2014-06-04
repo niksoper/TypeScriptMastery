@@ -1,14 +1,13 @@
-﻿import app = require('app');
-import bet = require('models/IBet');
+﻿/// <reference path="../reference.ts" />
 
-export class CoinFlipService {
+class CoinFlipService {
     flipCoin(): string {
         return Math.random() > 0.5 ? 'Heads' : 'Tails';
     }
 
-    payout(bet: bet.IBet): number {
+    payout(bet: Models.IBet): number {
         return bet.stake * 1.5;
     }
 }
 
-app.service('coinFlipService', CoinFlipService);
+angular.module('services').service('coinFlipService', CoinFlipService);

@@ -59,10 +59,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Gruntfile.js" />
+    <Content Include="Scripts\app\app-code.js" />
     <Content Include="Scripts\app\views\coinflip.html" />
     <Content Include="Scripts\app\views\cardpick.html" />
     <Content Include="Scripts\app\views\roulette.html" />
     <Content Include="packages.config" />
+    <Content Include="package.json" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
@@ -358,18 +361,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\app\angular.modules.d.ts" />
+    <TypeScriptCompile Include="Scripts\app\reference.ts" />
+    <TypeScriptCompile Include="Scripts\app\vendor.d.ts" />
+    <TypeScriptCompile Include="Scripts\app\controllers\controllers.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\IControllerScope.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\Roulette.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\CoinFlip.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\Navigation.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\CardPick.ts" />
     <TypeScriptCompile Include="Scripts\app\app.ts" />
-    <TypeScriptCompile Include="Scripts\app\bootstrap.ts" />
+    <Content Include="Scripts\app\bootstrap.js" />
     <TypeScriptCompile Include="Scripts\app\models\IBet.ts" />
     <TypeScriptCompile Include="Scripts\app\routes.ts" />
     <TypeScriptCompile Include="Scripts\app\services\Account.ts" />
     <TypeScriptCompile Include="Scripts\app\services\CoinFlip.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\services.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />

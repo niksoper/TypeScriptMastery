@@ -1,0 +1,1 @@
+{"version":3,"file":"Member.js","sourceRoot":"","sources":["Member.ts"],"names":["app","app.models","app.models.Member","app.models.Member.constructor"],"mappings":"AAAA,IAAO,GAAG;AAKT,CALD,UAAO,GAAG;KAAVA,UAAWA,MAAMA;QACbC;YACIC,gBAAYA,IAAmBA;gBAAnBC,SAAWA,GAAJA,IAAIA;AAAQA,YAC/BA,CAACA;YACLD,cAACA;QAADA,CAACA,IAAAD;QAHDA,uBAGCA;IACLA,CAACA,mCAAAD;4BAAAA;AAADA,CAACA,qBAAA"}
