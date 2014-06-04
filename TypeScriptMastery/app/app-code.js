@@ -1,39 +1,47 @@
 ﻿angular.module('services', []);
-var AccountService = (function () {
-    function AccountService() {
-        this.balance = 20;
-    }
-    AccountService.prototype.credit = function (amount) {
-        this.balance += amount;
-        return this.balance;
-    };
+var Services;
+(function (Services) {
+    var AccountService = (function () {
+        function AccountService() {
+            this.balance = 20;
+        }
+        AccountService.prototype.credit = function (amount) {
+            this.balance += amount;
+            return this.balance;
+        };
 
-    AccountService.prototype.debit = function (amount) {
-        this.balance -= amount;
-        return this.balance;
-    };
+        AccountService.prototype.debit = function (amount) {
+            this.balance -= amount;
+            return this.balance;
+        };
 
-    AccountService.prototype.reportBalance = function () {
-        return this.balance;
-    };
-    return AccountService;
-})();
+        AccountService.prototype.reportBalance = function () {
+            return this.balance;
+        };
+        return AccountService;
+    })();
+    Services.AccountService = AccountService;
+})(Services || (Services = {}));
 
-angular.module('services').service('accountService', AccountService);
-var CoinFlipService = (function () {
-    function CoinFlipService() {
-    }
-    CoinFlipService.prototype.flipCoin = function () {
-        return Math.random() > 0.5 ? 'Heads' : 'Tails';
-    };
+angular.module('services').service('accountService', Services.AccountService);
+var Services;
+(function (Services) {
+    var CoinFlipService = (function () {
+        function CoinFlipService() {
+        }
+        CoinFlipService.prototype.flipCoin = function () {
+            return Math.random() > 0.5 ? 'Heads' : 'Tails';
+        };
 
-    CoinFlipService.prototype.payout = function (bet) {
-        return bet.stake * 1.5;
-    };
-    return CoinFlipService;
-})();
+        CoinFlipService.prototype.payout = function (bet) {
+            return bet.stake * 1.5;
+        };
+        return CoinFlipService;
+    })();
+    Services.CoinFlipService = CoinFlipService;
+})(Services || (Services = {}));
 
-angular.module('services').service('coinFlipService', CoinFlipService);
+angular.module('services').service('coinFlipService', Services.CoinFlipService);
 angular.module('app', ['ngRoute', 'controllers', 'services']);
 var app;
 (function (app) {
@@ -128,8 +136,6 @@ var Controllers;
 })(Controllers || (Controllers = {}));
 var theApp = angular.module('app');
 
-theApp.controller('NavigationController', Controllers.NavigationController);
-
 theApp.config([
     '$routeProvider',
     function ($routeProvider) {
@@ -145,5 +151,5 @@ theApp.config([
         }).otherwise({ redirectTo: '/' });
     }
 ]);
-angular.module('controllers', []).controller(Controllers);
+angular.module('controllers', []);
 //# sourceMappingURL=app-code.js.map

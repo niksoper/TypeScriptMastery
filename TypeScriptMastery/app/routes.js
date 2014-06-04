@@ -1,8 +1,6 @@
 ﻿/// <reference path="./reference.ts" />
 var theApp = angular.module('app');
 
-theApp.controller('NavigationController', Controllers.NavigationController);
-
 theApp.config([
     '$routeProvider',
     function ($routeProvider) {
