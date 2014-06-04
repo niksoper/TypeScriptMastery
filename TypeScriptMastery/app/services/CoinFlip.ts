@@ -1,13 +1,15 @@
 ﻿/// <reference path="../reference.ts" />
 
-class CoinFlipService {
-    flipCoin(): string {
-        return Math.random() > 0.5 ? 'Heads' : 'Tails';
-    }
+module Services {
+    export class CoinFlipService {
+        flipCoin(): string {
+            return Math.random() > 0.5 ? 'Heads' : 'Tails';
+        }
 
-    payout(bet: Models.IBet): number {
-        return bet.stake * 1.5;
+        payout(bet: Models.IBet): number {
+            return bet.stake * 1.5;
+        }
     }
 }
 
-angular.module('services').service('coinFlipService', CoinFlipService);
+angular.module('services').service('coinFlipService', Services.CoinFlipService);

@@ -13,8 +13,8 @@ module Controllers {
         static $inject = ['$scope', 'coinFlipService', 'accountService'];
         constructor(
             private $scope: IControllerScope<CoinFlipController>,
-            private coinFlipService: CoinFlipService,
-            private accountService: AccountService) {
+            private coinFlipService: Services.CoinFlipService,
+            private accountService: Services.AccountService) {
 
             this.wallet = this.accountService.reportBalance();
             this.bet = { choice: 'Heads', stake: 5 };
