@@ -60,10 +60,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Gruntfile.js" />
-    <Content Include="Scripts\app\app-code.js" />
-    <Content Include="Scripts\app\views\coinflip.html" />
-    <Content Include="Scripts\app\views\cardpick.html" />
-    <Content Include="Scripts\app\views\roulette.html" />
+    <Content Include="app\app-code.js" />
+    <Content Include="app\views\coinflip.html" />
+    <Content Include="app\views\cardpick.html" />
+    <Content Include="app\views\roulette.html" />
     <Content Include="packages.config" />
     <Content Include="package.json" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
@@ -361,21 +361,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\app\reference.ts" />
-    <TypeScriptCompile Include="Scripts\app\vendor.d.ts" />
-    <TypeScriptCompile Include="Scripts\app\controllers\controllers.ts" />
-    <TypeScriptCompile Include="Scripts\app\controllers\IControllerScope.ts" />
-    <TypeScriptCompile Include="Scripts\app\controllers\Roulette.ts" />
-    <TypeScriptCompile Include="Scripts\app\controllers\CoinFlip.ts" />
-    <TypeScriptCompile Include="Scripts\app\controllers\Navigation.ts" />
-    <TypeScriptCompile Include="Scripts\app\controllers\CardPick.ts" />
-    <TypeScriptCompile Include="Scripts\app\app.ts" />
-    <Content Include="Scripts\app\bootstrap.js" />
-    <TypeScriptCompile Include="Scripts\app\models\IBet.ts" />
-    <TypeScriptCompile Include="Scripts\app\routes.ts" />
-    <TypeScriptCompile Include="Scripts\app\services\Account.ts" />
-    <TypeScriptCompile Include="Scripts\app\services\CoinFlip.ts" />
-    <TypeScriptCompile Include="Scripts\app\services\services.ts" />
+    <TypeScriptCompile Include="app\reference.ts" />
+    <TypeScriptCompile Include="app\vendor.d.ts" />
+    <TypeScriptCompile Include="app\controllers\controllers.ts" />
+    <TypeScriptCompile Include="app\controllers\IControllerScope.ts" />
+    <TypeScriptCompile Include="app\controllers\Roulette.ts" />
+    <TypeScriptCompile Include="app\controllers\CoinFlip.ts" />
+    <TypeScriptCompile Include="app\controllers\Navigation.ts" />
+    <TypeScriptCompile Include="app\controllers\CardPick.ts" />
+    <TypeScriptCompile Include="app\app.ts" />
+    <Content Include="app\bootstrap.js" />
+    <TypeScriptCompile Include="app\models\IBet.ts" />
+    <TypeScriptCompile Include="app\routes.ts" />
+    <TypeScriptCompile Include="app\services\Account.ts" />
+    <TypeScriptCompile Include="app\services\CoinFlip.ts" />
+    <TypeScriptCompile Include="app\services\services.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />

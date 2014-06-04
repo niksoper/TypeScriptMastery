@@ -182,7 +182,10 @@ $RECYCLE.BIN/
 #*.css
 *.scssc
 
-*.js
+# js files generated from ts files
+TypeScriptMastery/app/controllers/*.js
+TypeScriptMastery/app/models/*.js
+TypeScriptMastery/app/services/*.js
 
 # npm
 TypeScriptMastery/node_modules/
