@@ -5,9 +5,9 @@
 
         paths: {
             // set paths to requirejs modules so they can be loaded by requirejs
-            'angular': '../angular',
-            'angular-route': '../angular-route',
-            'jquery': '../jquery-2.1.1'
+            'angular': '../Scripts/angular',
+            'angular-route': '../Scripts/angular-route',
+            'jquery': '../Scripts/jquery-2.1.1'
         },
 
         shim: {

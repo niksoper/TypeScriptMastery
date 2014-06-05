@@ -14,15 +14,15 @@ app.config(['$routeProvider',
         // configure the routing for the module called 'app'
         $routeProvider
             .when('/', {
-                templateUrl: 'Scripts/app/views/coinflip.html',
+                templateUrl: 'app/views/coinflip.html',
                 controller: coinflip.Controller
             })
             .when('/roulette', {
-                templateUrl: 'Scripts/app/views/roulette.html',
+                templateUrl: 'app/views/roulette.html',
                 controller: roulette.Controller
             })
             .when('/cardpick', {
-                templateUrl: 'Scripts/app/views/cardpick.html',
+                templateUrl: 'app/views/cardpick.html',
                 controller: cardpick.Controller
             })
             .otherwise({ redirectTo: '/' });
